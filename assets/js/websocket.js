@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', loadWindow, false)
 
- function loadWindow () {
-
-   Array.from(document.getElementsByTagName('button')).forEach(function (value, i, col) {
-     col[i].onclick = function (e) { mode(e.target.id) }
-   })}
-
-async function sendRequest(data,callback){
-	ws.onmessage=callback
-	ws.send(data)
+function loadWindow () {
+   
 }
 
+function sendRequest(item,event,data,callback){
+	item.onmessage=callback
+	item.send(data)
+}
 
 function getPromiseFromEvent(item, event) {
   return new Promise((resolve) => {
@@ -29,30 +26,28 @@ async function waitForResponse() {
 
 
 let statusConnected = false
-let sessionId
+let sessionId = 111
 
 ws = new WebSocket("ws://supermicro1.localdomain/websocket")
 	console.log("initialized websocket")
 
 ws.onmessage = function(evt) {
-     if (statusConnected === false){
-          if (evt.data === "connected"){
-  	  	statusConnected = true  	  	
-  	  } else if (evt.data === "failed"){
-  	  	console.log("error")
-          }
-     }else{
+    //  if (statusConnected === false){
+    //       if (evt.data === "connected"){
+  	//   	statusConnected = true  	  	
+  	//   } else if (evt.data === "failed"){
+  	//   	console.log("error")
+    //       }
+    //  }else{
      
      
-    }
+    // }
+
 
 }
 
 ws.onopen = function() {
 	console.log("connected")
-	//JSON.stringify({"id":"d8e715be-6bc7-11e6-8c28-00e04d680384","msg":"method",
-	//                        "method":"auth.login","params": ["root","hendrix1942"]})
-//	ws.send()
 	main()
 }
 
@@ -62,9 +57,11 @@ ws.onclose = function() {
   
 
 function main(){	
-		sendRequest(JSON.stringify({"msg": "connect","version": "1","support": ["1"]})
+		sendRequest(ws,"onmessage",JSON.stringify({"msg": "connect","version": "1","support": ["1"]})
 	                        ,function(evt) {
+								console.log("recv message" + evt.data)
 						let jsonData=JSON.parse(evt.data)
+						sessionId = jsonData.session
 						console.log(jsonData)
 						if (jsonData.msg === "connected"){
 	                          	  	statusConnected = true
@@ -77,10 +74,12 @@ function main(){
         			  		waitForResponse()
         			  		console.log("done waiting")
         			  		})	
-		sendRequest(JSON.stringify({"id":"d8e715be-6bc7-11e6-8c28-00e04d680384","msg":"method",
+console.log(sessionId)
+		sendRequest(ws,"onmessage",JSON.stringify({"id":sessionId,"msg":"method",
 			                     "method":"auth.login","params": ["root","hendrix1942"]})
 	                      ,function(evt) {
 						let jsonData=JSON.parse(evt.data)
+					//	console.log(JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login","params": ["root","hendrix1942"]}))
 						console.log(jsonData)
 						if (jsonData.msg === "connected"){
 	                        	  	statusConnected = true
@@ -92,8 +91,24 @@ function main(){
         			  		console.log("more waiting")
 		  	  			waitForResponse()
 		  	  			console.log("more done waiting")
-        			  		})	
+        			  		})
 
+		// sendRequest(ws,"onmessage",JSON.stringify({"id":"d8e715be-6bc7-11e6-8c28-00e04d680384","msg":"method",
+		// 			  "method":"auth.login","params": ["root","hendrix1942"]})
+		// 			   ,function(evt) {
+		// 			 let jsonData=JSON.parse(evt.data)
+		// 			 console.log(jsonData)
+		// 			 if (jsonData.msg === "connected"){
+		// 						   statusConnected = true
+		// 							sessionId = jsonData.session
+		// 							 console.log(jsonData.session)
+		// 							 } else if (jsonData.msg === "failed"){
+		// 				 console.log("error")
+		// 				   }
+		// 				   console.log("more more waiting")
+		// 				 waitForResponse()
+		// 				 console.log("more more done waiting")
+		// 				   })	  
 	//ws.close()
 }
 
