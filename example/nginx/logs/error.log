@@ -2334,3 +2334,45 @@
 2022/04/02 09:21:57 [info] 24294#0: *27 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/02 09:27:52 [info] 24294#0: *29 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/02 09:31:00 [info] 24294#0: *31 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:34:04 [info] 24294#0: *33 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:44:42 [info] 24294#0: *35 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:48:00 [info] 24294#0: *37 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:49:15 [info] 24294#0: *38 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:55:16 [info] 24294#0: *40 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:57:55 [info] 24294#0: *42 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 09:59:11 [info] 24294#0: *43 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:00:56 [info] 24294#0: *45 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:05:41 [info] 24294#0: *47 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:08:17 [info] 24294#0: *49 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:09:29 [info] 24294#0: *50 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:12:48 [info] 24294#0: *52 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:14:19 [info] 24294#0: *53 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:32:38 [info] 24294#0: *55 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:45:22 [notice] 24293#0: signal 15 (SIGTERM) received from 3897, exiting
+2022/04/02 10:45:22 [notice] 24293#0: signal 15 (SIGTERM) received from 3897, exiting
+2022/04/02 10:45:22 [notice] 24294#0: signal 15 (SIGTERM) received from 3897, exiting
+2022/04/02 10:45:22 [notice] 24294#0: signal 15 (SIGTERM) received from 3897, exiting
+2022/04/02 10:45:22 [info] 24294#0: epoll_wait() failed (4: Interrupted system call)
+2022/04/02 10:45:22 [notice] 24294#0: exiting
+2022/04/02 10:45:22 [notice] 24294#0: exiting
+2022/04/02 10:45:22 [notice] 24294#0: exit
+2022/04/02 10:45:22 [notice] 24293#0: signal 17 (SIGCHLD) received from 24294
+2022/04/02 10:45:22 [notice] 24293#0: signal 17 (SIGCHLD) received from 24294
+2022/04/02 10:45:22 [notice] 24293#0: worker process 24294 exited with code 0
+2022/04/02 10:45:22 [notice] 24293#0: worker process 24294 exited with code 0
+2022/04/02 10:45:22 [notice] 24293#0: exit
+2022/04/02 10:45:22 [notice] 24293#0: exit
+2022/04/02 10:45:22 [notice] 3903#0: using the "epoll" event method
+2022/04/02 10:45:22 [notice] 3903#0: using the "epoll" event method
+2022/04/02 10:45:22 [notice] 3903#0: nginx/1.20.1
+2022/04/02 10:45:22 [notice] 3903#0: nginx/1.20.1
+2022/04/02 10:45:22 [notice] 3903#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/02 10:45:22 [notice] 3903#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/02 10:45:22 [notice] 3903#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/02 10:45:22 [notice] 3903#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/02 10:45:22 [notice] 3904#0: start worker processes
+2022/04/02 10:45:22 [notice] 3904#0: start worker processes
+2022/04/02 10:45:22 [notice] 3904#0: start worker process 3905
+2022/04/02 10:45:22 [notice] 3904#0: start worker process 3905
+2022/04/02 10:46:24 [info] 3905#0: *2 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/02 10:48:33 [info] 3905#0: *4 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000

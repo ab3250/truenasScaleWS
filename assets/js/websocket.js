@@ -30,7 +30,8 @@ async function main(){
 		const sessionId = connectResultParsed.session
 		console.log(connectResultParsed)
 		// Login & parse result
-		const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login","params": ["root","hendrix1942"]})
+		const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login",
+									  	 "params": ["root","hendrix1942"]})
 		ws.send(loginStr)
 		const loginResult = await getPromiseFromEvent(ws, "message")
 		const loginResultParsed = JSON.parse(loginResult.data)
