@@ -1,10 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', loadWindow, false)
-
-
-
 function getPromiseFromEvent(item, event) {
-
 	return new Promise((resolve) => {
 	  const listener = (data) => {
 		item.removeEventListener(event, listener);
@@ -14,22 +9,8 @@ function getPromiseFromEvent(item, event) {
 	})
   }
 
-
-async function waitForResponse(str) {	
-   await getPromiseFromEvent(ws, "onmessage",str)  
-}
-
-
-
-
 ws = new WebSocket("ws://supermicro1.localdomain/websocket")
 	console.log("initialized websocket")
-
-// ws.onmessage = function(evt) {
-//    console.log(evt.data)
-
-
-// }
 
 ws.onopen = function() {
 	console.log("connected")
@@ -41,43 +22,27 @@ ws.onclose = function() {
 }
 
 async function main(){	
-		console.log("p1 start")			
+		// Connect & parse result
+		const connectStr = JSON.stringify({"msg": "connect","version": "1","support": ["1"]})
 		ws.send(connectStr)
-		await getPromiseFromEvent(ws, "message")
-		console.log("p1 done")
-		console.log("p2 start")	
+		let connectResult = await getPromiseFromEvent(ws, "message")
+		let connectResultParsed = JSON.parse(connectResult.data)
+		let sessionId = connectResultParsed.session
+		// Login & parse result
+		const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login","params": ["root","hendrix1942"]})
 		ws.send(loginStr)
-		await getPromiseFromEvent(ws, "message")
-		console.log("p2 done")
-
-	//	console.log("p2 start")	
-	//	getPromiseFromEvent(ws, "onmessage", loginStr).then(console.log("p2 end"))
-
-		//sendRequest(ws,loginStr, loginCb)
-
-		// sendRequest(ws,"onmessage",JSON.stringify({"id":"d8e715be-6bc7-11e6-8c28-00e04d680384","msg":"method",
-		// 			  "method":"auth.login","params": ["root","hendrix1942"]})
-		// 			   ,function(evt) {
-		// 			 let jsonData=JSON.parse(evt.data)
-		// 			 console.log(jsonData)
-		// 			 if (jsonData.msg === "connected"){
-		// 						   statusConnected = true
-		// 							sessionId = jsonData.session
-		// 							 console.log(jsonData.session)
-		// 							 } else if (jsonData.msg === "failed"){
-		// 				 console.log("error")
-		// 				   }
-		// 				   console.log("more more waiting")
-		// 				 waitForResponse()
-		// 				 console.log("more more done waiting")
-		// 				   })	  
-//	ws.close()
+		let loginResult = await getPromiseFromEvent(ws, "message")
+		let loginResultParsed = JSON.parse(loginResult.data)
+		//  get datasets & parse results
+		const getDatasetsStr = JSON.stringify({"id": sessionId,"msg": "method",
+											   "method": "pool.filesystem_choices","params": []})
+		ws.send(getDatasetsStr)
+		let getDatasetResult = await getPromiseFromEvent(ws, "message")
+		let getDatasetResultParsed = JSON.parse(getDatasetResult.data)
+		console.log(getDatasetResultParsed)
 }
 
 
 
-function loadWindow () {
 
-
-}
 
