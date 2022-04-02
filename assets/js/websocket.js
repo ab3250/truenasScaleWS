@@ -1,28 +1,22 @@
 
 document.addEventListener('DOMContentLoaded', loadWindow, false)
 
-function loadWindow () {
-}
 
-function sendRequest(item,data,callback){
-	item.onmessage=callback
-	item.send(data)
-}
 
-function getPromiseFromEvent(item, evt, str) {
-	ws.send(str)
-  return new Promise((resolve) => {
-     const listener = (data) => {
-       item.removeEventListener(evt, listener);
-       resolve(data);
-     }
-     item.addEventListener(evt, listener);
-   })
- }
+function getPromiseFromEvent(item, event) {
+
+	return new Promise((resolve) => {
+	  const listener = (data) => {
+		item.removeEventListener(event, listener);
+		resolve(data);
+	  }
+	  item.addEventListener(event, listener);
+	})
+  }
 
 
 async function waitForResponse(str) {	
-  let data = await getPromiseFromEvent(ws, "onmessage",str)  
+   await getPromiseFromEvent(ws, "onmessage",str)  
 }
 
 
@@ -31,20 +25,11 @@ async function waitForResponse(str) {
 ws = new WebSocket("ws://supermicro1.localdomain/websocket")
 	console.log("initialized websocket")
 
-ws.onmessage = function(evt) {
-    //  if (statusConnected === false){
-    //       if (evt.data === "connected"){
-  	//   	statusConnected = true  	  	
-  	//   } else if (evt.data === "failed"){
-  	//   	console.log("error")
-    //       }
-    //  }else{
-     
-     
-    // }
+// ws.onmessage = function(evt) {
+//    console.log(evt.data)
 
 
-}
+// }
 
 ws.onopen = function() {
 	console.log("connected")
@@ -54,14 +39,19 @@ ws.onopen = function() {
 ws.onclose = function() {
 	console.log("closed websocket")
 }
-  
 
-async function main(){		
+async function main(){	
 		console.log("p1 start")			
-		waitForResponse(connectStr).then({console.log("p1 end")
-										      console.log("p2 start")
-											  waitForResponse(loginStr)
-											  .then(console.log("p2 end"))})
+		ws.send(connectStr)
+		await getPromiseFromEvent(ws, "message")
+		console.log("p1 done")
+		console.log("p2 start")	
+		ws.send(loginStr)
+		await getPromiseFromEvent(ws, "message")
+		console.log("p2 done")
+
+	//	console.log("p2 start")	
+	//	getPromiseFromEvent(ws, "onmessage", loginStr).then(console.log("p2 end"))
 
 		//sendRequest(ws,loginStr, loginCb)
 
@@ -81,10 +71,13 @@ async function main(){
 		// 				 waitForResponse()
 		// 				 console.log("more more done waiting")
 		// 				   })	  
-	//ws.close()
+//	ws.close()
 }
 
 
 
+function loadWindow () {
 
+
+}
 
