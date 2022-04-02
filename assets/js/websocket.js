@@ -2,14 +2,14 @@
 function getPromiseFromEvent(item, event) {
 	return new Promise((resolve) => {
 	  const listener = (data) => {
-		item.removeEventListener(event, listener);
+		item.removeEventListener(event, listener)
 		resolve(data);
 	  }
-	  item.addEventListener(event, listener);
+	  item.addEventListener(event, listener)
 	})
   }
 
-ws = new WebSocket("ws://supermicro1.localdomain/websocket")
+const ws = new WebSocket("ws://supermicro1.localdomain/websocket")
 	console.log("initialized websocket")
 
 ws.onopen = function() {
@@ -25,21 +25,25 @@ async function main(){
 		// Connect & parse result
 		const connectStr = JSON.stringify({"msg": "connect","version": "1","support": ["1"]})
 		ws.send(connectStr)
-		let connectResult = await getPromiseFromEvent(ws, "message")
-		let connectResultParsed = JSON.parse(connectResult.data)
-		let sessionId = connectResultParsed.session
+		const connectResult = await getPromiseFromEvent(ws, "message")
+		const connectResultParsed = JSON.parse(connectResult.data)
+		const sessionId = connectResultParsed.session
+		console.log(connectResultParsed)
 		// Login & parse result
 		const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login","params": ["root","hendrix1942"]})
 		ws.send(loginStr)
-		let loginResult = await getPromiseFromEvent(ws, "message")
-		let loginResultParsed = JSON.parse(loginResult.data)
-		//  get datasets & parse results
+		const loginResult = await getPromiseFromEvent(ws, "message")
+		const loginResultParsed = JSON.parse(loginResult.data)
+		console.log(loginResultParsed)
+		//  get datasets & parse result
 		const getDatasetsStr = JSON.stringify({"id": sessionId,"msg": "method",
 											   "method": "pool.filesystem_choices","params": []})
 		ws.send(getDatasetsStr)
-		let getDatasetResult = await getPromiseFromEvent(ws, "message")
-		let getDatasetResultParsed = JSON.parse(getDatasetResult.data)
+		const getDatasetResult = await getPromiseFromEvent(ws, "message")
+		const getDatasetResultParsed = JSON.parse(getDatasetResult.data)
 		console.log(getDatasetResultParsed)
+		// logout
+		ws.close()
 }
 
 
