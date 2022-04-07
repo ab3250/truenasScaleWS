@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+  <head>
+    <button>ClickMe</button>
+<div></div>
+  </head>
+  <body>   
+  </body>
+  <script  type="text/javascript">
+let sessionId 
+
+const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login",
+									  	 "params": ["root","hendrix1942"]})
+
+                       
+function getPromiseFromEvent(item, event, str) {
+  ws.send(str) 
+ return new Promise((resolve) => {
+	  const listener = (data) => {
+		item.removeEventListener(event, listener)
+		resolve(data);
+	  }
+	  item.addEventListener(event, listener)
+	})
+  }
+
+const ws = new WebSocket("ws://supermicro1.localdomain/websocket")
+	console.log("initialized websocket")
+
+ws.onopen = function() {
+	console.log("connected")
+	main()
+}
+
+ws.onclose = function() {
+	console.log("closed websocket")
+}
+
+function main(){
+
+    // Login & parse result
+  const connectStr = JSON.stringify({"msg": "connect","version": "1","support": ["1"]})
+  getPromiseFromEvent(ws, "message", connectStr)
+  .then(function(result) { 
+    console.log(result)
+    sessionId = JSON.parse(result.data).session
+    const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login",
+									  	 "params": ["root","hendrix1942"]})
+    return getPromiseFromEvent(ws, "message", loginStr)
+  })
+	.then(function(result) {
+    console.log(result)
+    const getDatasetsStr = JSON.stringify({"id": sessionId,"msg": "method",
+									   "method": "pool.filesystem_choices","params": []})
+    return getPromiseFromEvent(ws, "message", getDatasetsStr)
+  })
+  .then(function(result) {
+    console.log(result)
+    ws.close()
+  })
+  .catch(function(result) {
+    console.log(result)
+  })
+ }
+
+
+
+  </script>
+</html>
