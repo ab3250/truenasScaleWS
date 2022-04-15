@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+  <head>
+    <button>ClickMe</button>
+<div></div>
+  </head>
+  <body>   
+  </body>
+  <script  type="text/javascript">
+
+const username = "root",
+      password = "hendrix1942"
+
+let sessionId = 1
+                       
+function getPromiseFromEvent(item, event, str) {
+  ws.send(str) 
+ return new Promise((resolve) => {
+	  const listener = (data) => {
+		item.removeEventListener(event, listener)
+		resolve(data);
+	  }
+	  item.addEventListener(event, listener)
+	})
+  }
+
+const ws = new WebSocket("ws://supermicro1.localdomain/websocket")
+	console.log("initialized websocket")
+
+ws.onopen = function() {
+	console.log("connected")
+  ConnectAndLogin()
+  
+}
+
+ws.onclose = function() {
+	console.log("closed websocket")
+}
+
+function ConnectAndLogin(){
+  const connectStr = JSON.stringify({"msg": "connect","version": "1","support": ["1"]})
+    getPromiseFromEvent(ws, "message", connectStr)
+    .then(function(result) { 
+      console.log(result)
+      sessionId = JSON.parse(result.data).session
+      const loginStr = JSON.stringify({"id":sessionId,"msg":"method","method":"auth.login",
+                        "params": [username,password]})
+      return getPromiseFromEvent(ws, "message", loginStr)
+    })
+    .then(function(result) {
+      console.log(result)
+      main()
+    })
+    .catch(function(result) {
+    console.log(result)
+  })
+}
+//start new chain
+function main(){
+    // Login & parse result 
+    
+  const getDatasetsStr = JSON.stringify({"id": sessionId,"msg": "method",
+									   "method": "pool.filesystem_choices","params": []})
+  getPromiseFromEvent(ws, "message", getDatasetsStr)  
+  .then(function(result) {
+    console.log(result)
+    const getDiskTempStr = JSON.stringify({ 
+                                            "id": sessionId,"msg": "method","method": "disk.temperatures",                                            
+                                            "params": [["sda","sdb"]]
+                                          })
+    console.log(getDiskTempStr)
+    return getPromiseFromEvent(ws, "message", getDiskTempStr)                                        
+  })
+  .then(function(result) {
+    console.log(result)
+    const getDiskTempStr = JSON.stringify({ 
+                                            "id": sessionId,"msg": "method","method": "disk.query",                                            
+                                            "params": [[["name","=","sda"]]]
+                                          })
+    console.log(getDiskTempStr)
+    return getPromiseFromEvent(ws, "message", getDiskTempStr)                                        
+  })  
+  .then(function(result) {
+    console.log(result)
+    ws.close()
+  })
+  .catch(function(result) {
+    console.log(result)
+  })
+ }
+  </script>
+</html>
+<!-- //{"name":"sda","title": "sda","type": "HDD"},{"name":"powermode","title":"powermode","type":"","enum":"NEVER"} -->

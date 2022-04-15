@@ -2457,3 +2457,185 @@
 2022/04/06 22:45:19 [info] 25306#0: *42 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/06 22:47:11 [info] 25306#0: *44 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/06 22:48:41 [info] 25306#0: *46 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 08:48:40 [notice] 25305#0: signal 15 (SIGTERM) received from 1177, exiting
+2022/04/07 08:48:40 [notice] 25305#0: signal 15 (SIGTERM) received from 1177, exiting
+2022/04/07 08:48:40 [notice] 25306#0: signal 15 (SIGTERM) received from 1177, exiting
+2022/04/07 08:48:40 [notice] 25306#0: signal 15 (SIGTERM) received from 1177, exiting
+2022/04/07 08:48:40 [info] 25306#0: epoll_wait() failed (4: Interrupted system call)
+2022/04/07 08:48:40 [notice] 25306#0: exiting
+2022/04/07 08:48:40 [notice] 25306#0: exiting
+2022/04/07 08:48:40 [notice] 25306#0: exit
+2022/04/07 08:48:40 [notice] 25305#0: signal 17 (SIGCHLD) received from 25306
+2022/04/07 08:48:40 [notice] 25305#0: signal 17 (SIGCHLD) received from 25306
+2022/04/07 08:48:40 [notice] 25305#0: worker process 25306 exited with code 0
+2022/04/07 08:48:40 [notice] 25305#0: worker process 25306 exited with code 0
+2022/04/07 08:48:40 [notice] 25305#0: exit
+2022/04/07 08:48:40 [notice] 25305#0: exit
+2022/04/07 08:48:40 [notice] 1183#0: using the "epoll" event method
+2022/04/07 08:48:40 [notice] 1183#0: using the "epoll" event method
+2022/04/07 08:48:40 [notice] 1183#0: nginx/1.20.1
+2022/04/07 08:48:40 [notice] 1183#0: nginx/1.20.1
+2022/04/07 08:48:40 [notice] 1183#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/07 08:48:40 [notice] 1183#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/07 08:48:40 [notice] 1183#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/07 08:48:40 [notice] 1183#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/07 08:48:40 [notice] 1184#0: start worker processes
+2022/04/07 08:48:40 [notice] 1184#0: start worker processes
+2022/04/07 08:48:40 [notice] 1184#0: start worker process 1185
+2022/04/07 08:48:40 [notice] 1184#0: start worker process 1185
+2022/04/07 08:48:52 [error] 1185#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/07 08:48:52 [error] 1185#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/07 08:48:52 [error] 1185#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/07 08:49:44 [info] 1185#0: *2 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 08:52:24 [info] 1185#0: *4 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 08:53:42 [info] 1185#0: *5 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 08:56:14 [info] 1185#0: *7 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 21:03:54 [notice] 1184#0: signal 15 (SIGTERM) received from 16272, exiting
+2022/04/07 21:03:54 [notice] 1185#0: signal 15 (SIGTERM) received from 16272, exiting
+2022/04/07 21:03:54 [notice] 1184#0: signal 15 (SIGTERM) received from 16272, exiting
+2022/04/07 21:03:54 [notice] 1185#0: signal 15 (SIGTERM) received from 16272, exiting
+2022/04/07 21:03:54 [info] 1185#0: epoll_wait() failed (4: Interrupted system call)
+2022/04/07 21:03:54 [notice] 1185#0: exiting
+2022/04/07 21:03:54 [notice] 1185#0: exiting
+2022/04/07 21:03:54 [notice] 1185#0: exit
+2022/04/07 21:03:54 [notice] 1184#0: signal 17 (SIGCHLD) received from 1185
+2022/04/07 21:03:54 [notice] 1184#0: signal 17 (SIGCHLD) received from 1185
+2022/04/07 21:03:54 [notice] 1184#0: worker process 1185 exited with code 0
+2022/04/07 21:03:54 [notice] 1184#0: worker process 1185 exited with code 0
+2022/04/07 21:03:54 [notice] 1184#0: exit
+2022/04/07 21:03:54 [notice] 1184#0: exit
+2022/04/07 21:03:54 [notice] 16278#0: using the "epoll" event method
+2022/04/07 21:03:54 [notice] 16278#0: using the "epoll" event method
+2022/04/07 21:03:54 [notice] 16278#0: nginx/1.20.1
+2022/04/07 21:03:54 [notice] 16278#0: nginx/1.20.1
+2022/04/07 21:03:54 [notice] 16278#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/07 21:03:54 [notice] 16278#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/07 21:03:54 [notice] 16278#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/07 21:03:54 [notice] 16278#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/07 21:03:54 [notice] 16279#0: start worker processes
+2022/04/07 21:03:54 [notice] 16279#0: start worker processes
+2022/04/07 21:03:54 [notice] 16279#0: start worker process 16280
+2022/04/07 21:03:54 [notice] 16279#0: start worker process 16280
+2022/04/07 21:04:08 [error] 16280#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/07 21:04:08 [error] 16280#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/07 21:04:08 [error] 16280#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/07 21:04:57 [info] 16280#0: *2 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 21:07:59 [info] 16280#0: *4 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 21:10:35 [info] 16280#0: *6 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 21:12:44 [info] 16280#0: *8 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:00:33 [info] 16280#0: *10 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:23:17 [info] 16280#0: *12 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:24:18 [info] 16280#0: *13 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:25:29 [info] 16280#0: *15 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:28:26 [info] 16280#0: *17 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:31:44 [info] 16280#0: *19 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:42:05 [info] 16280#0: *21 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:46:22 [info] 16280#0: *23 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:49:22 [info] 16280#0: *25 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:50:23 [info] 16280#0: *26 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:52:12 [info] 16280#0: *28 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:55:06 [info] 16280#0: *30 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:56:33 [info] 16280#0: *31 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:58:02 [info] 16280#0: *32 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 22:59:07 [info] 16280#0: *34 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:01:05 [info] 16280#0: *35 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:02:25 [info] 16280#0: *36 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:04:43 [info] 16280#0: *38 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:05:44 [info] 16280#0: *39 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:08:13 [info] 16280#0: *41 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:11:05 [info] 16280#0: *43 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:13:10 [info] 16280#0: *45 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/07 23:13:27 [info] 16280#0: *44 client 127.0.0.1 closed keepalive connection
+2022/04/08 22:04:19 [notice] 16279#0: signal 15 (SIGTERM) received from 3438, exiting
+2022/04/08 22:04:19 [notice] 16280#0: signal 15 (SIGTERM) received from 3438, exiting
+2022/04/08 22:04:19 [notice] 16279#0: signal 15 (SIGTERM) received from 3438, exiting
+2022/04/08 22:04:19 [notice] 16280#0: signal 15 (SIGTERM) received from 3438, exiting
+2022/04/08 22:04:19 [info] 16280#0: epoll_wait() failed (4: Interrupted system call)
+2022/04/08 22:04:19 [notice] 16280#0: exiting
+2022/04/08 22:04:19 [notice] 16280#0: exiting
+2022/04/08 22:04:19 [notice] 16280#0: exit
+2022/04/08 22:04:19 [notice] 16279#0: signal 17 (SIGCHLD) received from 16280
+2022/04/08 22:04:19 [notice] 16279#0: signal 17 (SIGCHLD) received from 16280
+2022/04/08 22:04:19 [notice] 16279#0: worker process 16280 exited with code 0
+2022/04/08 22:04:19 [notice] 16279#0: worker process 16280 exited with code 0
+2022/04/08 22:04:19 [notice] 16279#0: exit
+2022/04/08 22:04:19 [notice] 16279#0: exit
+2022/04/14 21:59:32 [notice] 14468#0: using the "epoll" event method
+2022/04/14 21:59:32 [notice] 14468#0: using the "epoll" event method
+2022/04/14 21:59:32 [notice] 14468#0: nginx/1.20.1
+2022/04/14 21:59:32 [notice] 14468#0: nginx/1.20.1
+2022/04/14 21:59:32 [notice] 14468#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/14 21:59:32 [notice] 14468#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/14 21:59:32 [notice] 14468#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/14 21:59:32 [notice] 14468#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/14 21:59:32 [notice] 14469#0: start worker processes
+2022/04/14 21:59:32 [notice] 14469#0: start worker processes
+2022/04/14 21:59:32 [notice] 14469#0: start worker process 14470
+2022/04/14 21:59:32 [notice] 14469#0: start worker process 14470
+2022/04/14 21:59:57 [error] 14470#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/14 21:59:57 [error] 14470#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/14 21:59:57 [error] 14470#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/14 22:00:57 [info] 14470#0: *2 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:04:01 [info] 14470#0: *4 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:06:40 [info] 14470#0: *6 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:07:40 [info] 14470#0: *7 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:09:13 [info] 14470#0: *8 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:14:11 [info] 14470#0: *10 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:15:51 [info] 14470#0: *12 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:17:21 [info] 14470#0: *14 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:20:46 [info] 14470#0: *16 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:24:00 [info] 14470#0: *18 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:26:40 [info] 14470#0: *20 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:28:23 [info] 14470#0: *22 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:31:12 [info] 14470#0: *24 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:33:07 [info] 14470#0: *26 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:35:27 [info] 14470#0: *28 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/14 22:42:07 [error] 14470#0: *29 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/14 22:42:07 [error] 14470#0: *29 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/14 22:42:07 [error] 14470#0: *29 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/14 22:43:07 [info] 14470#0: *30 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:02:00 [notice] 14469#0: signal 15 (SIGTERM) received from 20605, exiting
+2022/04/15 09:02:00 [notice] 14469#0: signal 15 (SIGTERM) received from 20605, exiting
+2022/04/15 09:02:00 [notice] 14470#0: signal 15 (SIGTERM) received from 20605, exiting
+2022/04/15 09:02:00 [notice] 14470#0: signal 15 (SIGTERM) received from 20605, exiting
+2022/04/15 09:02:00 [info] 14470#0: epoll_wait() failed (4: Interrupted system call)
+2022/04/15 09:02:00 [notice] 14470#0: exiting
+2022/04/15 09:02:00 [notice] 14470#0: exiting
+2022/04/15 09:02:00 [notice] 14470#0: exit
+2022/04/15 09:02:00 [notice] 14469#0: signal 17 (SIGCHLD) received from 14470
+2022/04/15 09:02:00 [notice] 14469#0: signal 17 (SIGCHLD) received from 14470
+2022/04/15 09:02:00 [notice] 14469#0: worker process 14470 exited with code 0
+2022/04/15 09:02:00 [notice] 14469#0: worker process 14470 exited with code 0
+2022/04/15 09:02:00 [notice] 14469#0: exit
+2022/04/15 09:02:00 [notice] 14469#0: exit
+2022/04/15 09:02:00 [notice] 20611#0: using the "epoll" event method
+2022/04/15 09:02:00 [notice] 20611#0: using the "epoll" event method
+2022/04/15 09:02:00 [notice] 20611#0: nginx/1.20.1
+2022/04/15 09:02:00 [notice] 20611#0: nginx/1.20.1
+2022/04/15 09:02:00 [notice] 20611#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/15 09:02:00 [notice] 20611#0: OS: Linux 5.15.11-gentoo-dist
+2022/04/15 09:02:00 [notice] 20611#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/15 09:02:00 [notice] 20611#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2022/04/15 09:02:00 [notice] 20612#0: start worker processes
+2022/04/15 09:02:00 [notice] 20612#0: start worker processes
+2022/04/15 09:02:00 [notice] 20612#0: start worker process 20613
+2022/04/15 09:02:00 [notice] 20612#0: start worker process 20613
+2022/04/15 09:02:14 [error] 20613#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/15 09:02:14 [error] 20613#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/15 09:02:14 [error] 20613#0: *1 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index4.html"
+2022/04/15 09:03:14 [info] 20613#0: *2 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:05:13 [info] 20613#0: *3 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:06:42 [info] 20613#0: *4 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:30:53 [info] 20613#0: *6 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:34:13 [info] 20613#0: *8 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:36:05 [info] 20613#0: *10 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:40:21 [info] 20613#0: *12 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:42:14 [info] 20613#0: *14 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:43:44 [info] 20613#0: *15 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:56:48 [info] 20613#0: *17 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 09:57:56 [info] 20613#0: *18 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 10:01:14 [info] 20613#0: *20 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 10:02:30 [info] 20613#0: *22 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 10:03:43 [info] 20613#0: *23 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 10:05:45 [info] 20613#0: *25 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/15 10:07:17 [info] 20613#0: *27 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
