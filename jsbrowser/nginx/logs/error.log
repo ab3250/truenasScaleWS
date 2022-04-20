@@ -2900,3 +2900,9 @@
 2022/04/20 18:16:31 [info] 5557#0: *94 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/20 18:23:38 [info] 5557#0: *96 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/20 18:24:41 [info] 5557#0: *97 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:27:46 [info] 5557#0: *99 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:34:54 [info] 5557#0: *101 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:36:04 [info] 5557#0: *103 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:37:04 [info] 5557#0: *104 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:41:15 [info] 5557#0: *106 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:42:41 [info] 5557#0: *108 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000

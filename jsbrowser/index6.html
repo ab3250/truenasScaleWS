@@ -13,13 +13,14 @@
 
         const connectObj = {
             get str() {
-                return (this.str = JSON.stringify({
+                return JSON.stringify({
                     msg: 'connect',
                     version: '1',
                     support: ['1'],
-                }))
+                })
             },
             processRes: function (res) {
+                console.log(res.msg)
                 sessionId = res.session
             },
         }

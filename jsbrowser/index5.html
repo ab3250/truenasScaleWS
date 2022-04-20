@@ -1,3 +1,11 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+    <head>
+        <button>ClickMe</button>
+        <div></div>
+    </head>
+    <body></body>
+    <script type="text/javascript">
         const username = 'root',
             password = 'hendrix1942'
 
@@ -45,22 +53,12 @@
                     })
                     return getPromiseFromEvent(ws, 'message', loginStr)
                 })
-                // .then(function(result) {
-                //   console.log(result)
-                //   main()
-                // })
                 .catch(function (result) {
                     console.log(result)
                 })
         }
 
         function main() {
-
-           
-
-
-
-            
             // Login & parse result
             const connectStr = JSON.stringify({
                 msg: 'connect',
@@ -101,13 +99,7 @@
                 })
                 .then(function (temperaturesResult) {
                     console.log(temperaturesResult)
-                    document.getElementById('out').innerText =
-                        ' sda ' +
-                        JSON.parse(temperaturesResult.data).result.sda +
-                        ' sdb ' +
-                        JSON.parse(temperaturesResult.data).result.sdb +
-                        ' ' +
-                        count++
+
                     const getDiskTempStr = JSON.stringify({
                         id: sessionId,
                         msg: 'method',
@@ -118,10 +110,11 @@
                 })
                 .then(function (result) {
                     console.log(result)
-                    // ws.close()
-                    const timeoutID = setTimeout(main, 1000)
+                    ws.close()
                 })
                 .catch(function (result) {
                     console.log(result)
                 })
         }
+    </script>
+</html>
