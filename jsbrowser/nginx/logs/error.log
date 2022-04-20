@@ -2866,3 +2866,22 @@
 2022/04/20 08:30:31 [error] 5557#0: *39 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index6.html"
 2022/04/20 08:31:31 [info] 5557#0: *40 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/20 08:33:14 [info] 5557#0: *42 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 08:50:51 [info] 5557#0: *44 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 08:52:35 [info] 5557#0: *46 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 08:54:56 [info] 5557#0: *48 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 08:56:12 [info] 5557#0: *49 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 08:59:46 [info] 5557#0: *51 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:01:26 [info] 5557#0: *53 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:03:12 [info] 5557#0: *54 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:09:05 [info] 5557#0: *56 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:10:50 [info] 5557#0: *58 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:12:18 [info] 5557#0: *59 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:13:36 [info] 5557#0: *61 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:15:10 [info] 5557#0: *63 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:16:22 [info] 5557#0: *64 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 09:17:38 [info] 5557#0: *65 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 10:50:10 [info] 5557#0: *67 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 10:53:26 [info] 5557#0: *69 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 10:54:40 [info] 5557#0: *71 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 10:55:44 [info] 5557#0: *72 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:11:01 [info] 5557#0: *74 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
