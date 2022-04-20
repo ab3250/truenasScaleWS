@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+    <head>
+        <button>ClickMe</button>
+        <div id="out"></div>
+    </head>
+    <body></body>
+    <script type="text/javascript">
+        const username = 'root',
+            password = 'hendrix1942'
+
+        let sessionId = 1     
+
+        const connectStr = JSON.stringify({
+            msg: 'connect',
+            version: '1',
+            support: ['1'],
+        })
+
+        const getDiskTempStr = JSON.stringify({
+            id: sessionId,
+            msg: 'method',
+            method: 'disk.temperatures',
+            params: [['sda', 'sdb']],
+        })
+        const getPoolsStr = JSON.stringify({
+            id: sessionId,
+            msg: 'method',
+            method: 'pool.query',
+            params: [[['name', '=', 'tank']]],
+        })
+
+        const loginStr = JSON.stringify({
+            id: sessionId,
+            msg: 'method',
+            method: 'auth.login',
+            params: [username, password],
+        })
+        const ws = new WebSocket('ws://supermicro1.localdomain/websocket')
+        ws.onopen = function () {
+            console.log('connected')
+            main()
+        }
+
+        ws.onclose = function () {
+            console.log('closed websocket')
+        }
+
+        console.log('initialized websocket')
+
+        function getPromiseFromEvent(item, event, str) {
+            ws.send(str)
+            return new Promise((resolve) => {
+                const listener = (data) => {
+                    item.removeEventListener(event, listener)
+                    console.log(data)
+                    resolve(data)
+                }
+                item.addEventListener(event, listener)
+            })
+        }
+
+        function main() {
+            [connectStr, loginStr, getPoolsStr, getDiskTempStr].reduce(
+                (accumulatorPromise, nextStr) => {                                               
+                    return accumulatorPromise.then(() => {                        
+                        return getPromiseFromEvent(ws, 'message', nextStr)                        
+                    })
+                },Promise.resolve()
+            )
+        }
+    </script>
+</html>

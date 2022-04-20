@@ -22,16 +22,14 @@ function getPromiseFromEvent(item, event, str) {
   }
 
 const ws = new WebSocket("ws://supermicro1.localdomain/websocket")
-	console.log("initialized websocket")
-
-ws.onopen = function() {
+.onopen = function() {
 	console.log("connected")
-	main()
-}
+	main()}
+.onclose = function() {
+	console.log("closed websocket")}
 
-ws.onclose = function() {
-	console.log("closed websocket")
-}
+console.log("initialized websocket")
+
 
 function main(){
 
