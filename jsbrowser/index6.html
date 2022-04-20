@@ -12,55 +12,62 @@
         sessionId = 1
 
         const connectObj = {
-            str: JSON.stringify({
-                msg: 'connect',
-                version: '1',
-                support: ['1'],
-            }),
+            get str() {
+                return (this.str = JSON.stringify({
+                    msg: 'connect',
+                    version: '1',
+                    support: ['1'],
+                }))
+            },
             processRes: function (res) {
-                console.log(res.session)
                 sessionId = res.session
             },
-        }       
-        
+        }
+
         const loginObj = {
-            str: JSON.stringify({
-                id:  sessionId,
-                msg: 'method',
-                method: 'auth.login',
-                params: [username, password],
-            }),
+            get str() {
+                return JSON.stringify({
+                    id: sessionId,
+                    msg: 'method',
+                    method: 'auth.login',
+                    params: [username, password],
+                })
+            },
             processRes: function (res) {
                 console.log(res.result)
             },
         }
 
         const getDiskTempObj = {
-            str: JSON.stringify({
-                id:  sessionId,
-                msg: 'method',
-                method: 'disk.temperatures',
-                params: [['sda', 'sdb']],
-            }),
+            get str() {
+                return JSON.stringify({
+                    id: sessionId,
+                    msg: 'method',
+                    method: 'disk.temperatures',
+                    params: [['sda', 'sdb']],
+                })
+            },
             processRes: function (res) {
                 console.log(res.result)
             },
         }
 
         const getPoolObj = {
-            str: JSON.stringify({
-                id:  sessionId,
-                msg: 'method',
-                method: 'pool.query',
-                params: [[['name', '=', 'tank']]],
-            }),
+            get str() {
+                return JSON.stringify({
+                    id: sessionId,
+                    msg: 'method',
+                    method: 'pool.query',
+                    params: [[['name', '=', 'tank']]],
+                })
+            },
             processRes: function (res) {
                 console.log(res.result)
             },
         }
 
         const ws = new WebSocket('ws://supermicro1.localdomain/websocket')
-        
+
         ws.onopen = function () {
             console.log('connected')
             main()
@@ -78,7 +85,6 @@
                 const listener = (res) => {
                     item.removeEventListener(event, listener)
                     cmdObj.processRes(JSON.parse(res.data))
-                    console.log(sessionId)
                     resolve(res)
                 }
                 item.addEventListener(event, listener)
@@ -87,9 +93,9 @@
 
         function main() {
             ;[connectObj, loginObj, getPoolObj, getDiskTempObj].reduce(
-                (accumulatorPromise, nextStr) => {
+                (accumulatorPromise, nextObj) => {
                     return accumulatorPromise.then(() => {
-                        return getPromiseFromEvent(ws, 'message', nextStr)
+                        return getPromiseFromEvent(ws, 'message', nextObj)
                     })
                 },
                 Promise.resolve()

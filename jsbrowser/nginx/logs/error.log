@@ -2885,3 +2885,18 @@
 2022/04/20 10:54:40 [info] 5557#0: *71 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/20 10:55:44 [info] 5557#0: *72 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
 2022/04/20 11:11:01 [info] 5557#0: *74 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:33:13 [info] 5557#0: *76 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:37:32 [info] 5557#0: *78 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:44:03 [info] 5557#0: *80 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:45:09 [info] 5557#0: *82 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:47:46 [info] 5557#0: *84 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 11:49:45 [info] 5557#0: *86 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:05:11 [error] 5557#0: *87 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index6.html"
+2022/04/20 18:05:11 [error] 5557#0: *87 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index6.html"
+2022/04/20 18:05:11 [error] 5557#0: *87 open() "/media/stor/gentoo-files/programs/Chibi/truenas-api-ws/jsbrowser/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/index6.html"
+2022/04/20 18:06:11 [info] 5557#0: *88 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:13:02 [info] 5557#0: *90 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:14:49 [info] 5557#0: *92 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:16:31 [info] 5557#0: *94 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:23:38 [info] 5557#0: *96 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
+2022/04/20 18:24:41 [info] 5557#0: *97 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8000
